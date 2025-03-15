@@ -37,14 +37,14 @@ console.log(ADD(2,3))
 
 
 // function within Functions
-// function call()
-// {
-//     return function(a,b){
-//         return a+b
-//     }
-// }
-// var sum = call()
-// console.log(sum(4,6))
+function call()
+{
+    return function(a,b){
+        return a+b
+    }
+}
+var sum = call()
+console.log(sum(4,6))
 
 
 // CLOSURE
