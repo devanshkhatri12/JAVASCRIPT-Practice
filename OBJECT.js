@@ -51,3 +51,13 @@ function calc(val)
 console.log(calc(5).add(2))
 console.log(calc(5).sub(2))
 
+
+
+
+// use expressions for a computed property name to bind
+var key = 'action'
+const obj1 = {
+    [key]: 'execute successfully'
+}
+
+console.log(obj1.action)
