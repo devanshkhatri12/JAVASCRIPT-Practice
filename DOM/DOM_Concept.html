@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Concept</title>
+    <style>
+        #bg-color{
+            background-color: rgb(79, 78, 78);
+            color: white;
+        }
+    </style>
+</head>
+<body id="bg-color">
+    <div>
+        <h1 id="title" class="heading">Practice DOM Concept <span id="display: none">test code</span></h1>
+        <p class="Para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, doloremque?</p>
+
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <input type="password" name="password">
+
+        <ul>
+            <li class="list-item">apple</li>
+            <li class="list-item">Mango</li>
+            <li class="list-item">Orange</li>
+            <li class="list-item">Grapes</li>
+        </ul>
+        
+    </div>
+</body>
+<script>
+    const title = document.getElementById('title');
+    console.log(title)
+
+    console.log(title.setAttribute('class', 'test heading'))                // we have to set present as well as past both the classes otherwise it will override the present class 
+
+    console.log(title.getAttribute('class'));
+
+    title.style.backgroundColor = 'Green';
+
+    title.style.padding = '10px';
+
+    title.style.borderRadius = '10px';
+
+    // Difference b/w innerHTML , textContent and innerText
+    console.log(title.innerHTML);
+    console.log(title.innerText);
+    console.log(title.textContent);
+
+
+    // Selector
+    console.log(document.querySelectorAll('li'))
+    console.log(document.querySelector('li'))
+    const myli = document.querySelector('li')
+    myli.style.backgroundColor = 'blue'
+
+    const mylist = document.querySelectorAll('li')
+
+    mylist.forEach(function(l) {
+        l.style.backgroundColor = 'white'
+        l.style.color = 'grey'
+    })
+
+    // nodelist and HTMLcollections are not type of array
+
+    const tempClassList = document.getElementsByClassName('list-item')          //it gives us HTMLCollection
+
+    const AllClasses = Array.from(tempClassList)
+
+    AllClasses.forEach(function(h){
+        h.style.border = '2px solid green';
+        h.style.border = '5px';
+        h.innerText = 'KHATRI'
+    })
+
+</script>
+</html>
