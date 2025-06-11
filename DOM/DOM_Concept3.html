@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove and Edit Element in DOM</title>
+</head>
+<body>
+    <div class="language">
+        <li>C++</li>
+    </div>
+</body>
+<script>
+    // we can't perform this operation bcz it traverse all tree evert time
+    function addLanguage(language)
+    {
+        const li = document.createElement('li')
+        li.innerHTML = `${language}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("JavaScript")
+    addLanguage("Python")
+
+    // Always prefer this in interview or some where else
+    function OptimizeAddLanguage(language)
+    {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(`${language}`))
+        document.querySelector('.language').appendChild(li)
+    }
+    OptimizeAddLanguage("goLang")
+    OptimizeAddLanguage("Java")
+
+    // EDIT 
+    const elem = document.querySelector("li:nth-child(2)")
+    const newElem = document.createElement('li')
+    newElem.textContent = "OOP Concept"
+    elem.replaceWith(newElem)
+
+</script>
+</html>
