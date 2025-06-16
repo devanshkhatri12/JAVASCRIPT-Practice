@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background-color: black;
+}
+
+nav a[aria-current='page'] {
+  color: white;
+  background-color: #d4d4d4;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.projects {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.project-1{
+  height: 30%;
+  width: 90%;
+  background-color: #fff;
+  border: 2px solid #212121;
+  padding: 30px 90px;
+  border-radius: 8px;
+  color: #212121;
+  margin-right: 4px;
+  text-align: center;
+
+
+}
+/* .project-link {
+  background-color: #fff;
+
+
+
+  border: 2px solid #212121;
+  margin-top: 5px;
+
+} */
