@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(146, 144, 144);
+}
+
+.center{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(54, 53, 53);
+    flex-direction: column;
+}
+
+#banner{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#clock{
+    background-color: orange;
+    height: 5%;
+    width: 20%;
+    padding: 5px 10px;
+    margin-top: 0.5rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    height: 100vh;
+    height: fit-content;
+    font-weight: 600;
+}
+
